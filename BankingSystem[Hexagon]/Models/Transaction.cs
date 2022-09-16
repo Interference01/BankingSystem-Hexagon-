@@ -10,7 +10,7 @@ namespace BankingSystem_Hexagon_.Models
     {
         public int Id { get; set; } 
         public DateTime DateTime { get; set; }
-
+        //jhgugbk
 
     }
 }
