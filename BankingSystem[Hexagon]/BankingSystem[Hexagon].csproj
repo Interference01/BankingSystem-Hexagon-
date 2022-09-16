@@ -8,4 +8,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="admin-module\models\" />
+    <Folder Include="admin-module\presenters\" />
+    <Folder Include="admin-module\use-cases\" />
+    <Folder Include="admin-module\view\" />
+    <Folder Include="auth-module\use-cases\" />
+    <Folder Include="auth-module\presenters\" />
+    <Folder Include="auth-module\view\" />
+    <Folder Include="auth-module\models\" />
+    <Folder Include="card-module\models\" />
+    <Folder Include="card-module\presenters\" />
+    <Folder Include="card-module\use-cases\" />
+    <Folder Include="card-module\view\" />
+  </ItemGroup>
+
 </Project>
