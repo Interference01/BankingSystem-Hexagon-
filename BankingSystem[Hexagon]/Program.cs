@@ -1,6 +1,11 @@
-﻿using BankingSystem_Hexagon_.auth_module.models;
+﻿using BankingSystem_Hexagon_.auth_module.core.ports;
+using BankingSystem_Hexagon_.auth_module.core.presenters;
+using BankingSystem_Hexagon_.auth_module.models;
 using BankingSystem_Hexagon_.auth_module.repositories;
 using BankingSystem_Hexagon_.auth_module.use_cases;
+using BankingSystem_Hexagon_.auth_module.view;
+using BankingSystem_Hexagon_.console_ui;
+using BankingSystem_Hexagon_.console_ui.pages;
 
 namespace BankingSystem_Hexagon_
 {
@@ -8,17 +13,28 @@ namespace BankingSystem_Hexagon_
     {
         static void Main(string[] args)
         {
+            var consoleUI = new ConsoleUI();
+
             var authRepo = new AuthRepositoryTemp();
             var authUseCase = new AuthUseCase(authRepo);
 
-            try {
-               var userId = authUseCase.Login("val", "1111");
-                Console.WriteLine(userId);
-            } catch (Exception e) {
-                Console.WriteLine(e.Message);
-            }
-            Console.ReadKey();
+            var clientPage = new ClientPage();
+            var authView = new AuthConsoleView(consoleUI, clientPage);
+            var authPresenter = new AuthPresenter(authUseCase, authView);
+
+            var authPage = new AuthPage(authPresenter);
             
+            
+            consoleUI.Show(authPage);
+
+
+
+
+
+
+
+
+            Console.ReadKey();
         }
     }
 }
