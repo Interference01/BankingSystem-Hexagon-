@@ -7,5 +7,12 @@ using System.Threading.Tasks;
 namespace BankingSystem_Hexagon_.auth_module.models {
     internal class User {
         public Guid Id { get; set; }
+        public Role _Role { get; set; }
+        public enum Role { Client, Admin }
+
+        public User(Guid id, Role role) {
+            Id = id;
+            _Role = role;
+        }
     }
 }
