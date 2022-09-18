@@ -15,7 +15,7 @@ namespace BankingSystem_Hexagon_
         {
             var consoleUI = new ConsoleUI();
 
-            var authRepo = new AuthRepositoryTemp();
+            var authRepo = new AuthRepositoryList();
             var authUseCase = new AuthUseCase(authRepo);
 
             var clientPage = new ClientPage();
