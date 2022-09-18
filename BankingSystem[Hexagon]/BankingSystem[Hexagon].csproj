@@ -9,14 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="admin-module\models\" />
-    <Folder Include="admin-module\presenters\" />
-    <Folder Include="admin-module\use-cases\" />
-    <Folder Include="admin-module\view\" />
-    <Folder Include="card-module\models\" />
-    <Folder Include="card-module\presenters\" />
-    <Folder Include="card-module\use-cases\" />
-    <Folder Include="card-module\view\" />
+    <Compile Remove="admin-module\**" />
+    <Compile Remove="card-module\**" />
+    <EmbeddedResource Remove="admin-module\**" />
+    <EmbeddedResource Remove="card-module\**" />
+    <None Remove="admin-module\**" />
+    <None Remove="card-module\**" />
   </ItemGroup>
 
 </Project>
