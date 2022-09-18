@@ -1,9 +1,4 @@
 ﻿using BankingSystem_Hexagon_.console_ui.pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.console_ui {
     internal class ConsoleUI {
@@ -18,7 +13,7 @@ namespace BankingSystem_Hexagon_.console_ui {
         }
         public void Rerender() {
             if (CurrentPage != null) {
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 Show(CurrentPage);
             }
         }

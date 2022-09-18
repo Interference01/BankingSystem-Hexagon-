@@ -19,7 +19,8 @@ namespace BankingSystem_Hexagon_
             var authUseCase = new AuthUseCase(authRepo);
 
             var clientPage = new ClientPage();
-            var authView = new AuthConsoleView(consoleUI, clientPage);
+            var adminPage = new AdminPage();
+            var authView = new AuthConsoleView(consoleUI, clientPage, adminPage);
             var authPresenter = new AuthPresenter(authUseCase, authView);
 
             var authPage = new AuthPage(authPresenter);

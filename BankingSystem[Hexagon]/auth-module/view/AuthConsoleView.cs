@@ -12,10 +12,17 @@ namespace BankingSystem_Hexagon_.auth_module.view {
     internal class AuthConsoleView : IAuthView {
         private readonly ConsoleUI consoleUI;
         private readonly IPage clientPage;
-        public AuthConsoleView(ConsoleUI consoleUI, IPage clientPage) {
+        private readonly IPage adminPage;
+        public AuthConsoleView(ConsoleUI consoleUI, IPage clientPage, IPage adminPage) {
             this.consoleUI = consoleUI;
             this.clientPage = clientPage;
+            this.adminPage = adminPage;
         }
+
+        public void ShowAdminContent(User user) {
+            consoleUI.Show(adminPage);
+        }
+
         public void ShowClientContent(User user) {
             consoleUI.Show(clientPage);
         }
