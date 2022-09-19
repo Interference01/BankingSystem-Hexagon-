@@ -10,6 +10,6 @@ namespace BankingSystem_Hexagon_.admin_module.core.ports
 {
     internal interface IRegisterRepository
     {
-        public Client? SaveClient(string name, string surname, string email, string password, string phone);
+        public Client? SaveClient(Client client);
     }
 }
