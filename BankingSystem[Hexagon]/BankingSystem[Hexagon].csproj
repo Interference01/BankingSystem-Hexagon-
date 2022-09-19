@@ -9,12 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="admin-module\**" />
     <Compile Remove="card-module\**" />
-    <EmbeddedResource Remove="admin-module\**" />
     <EmbeddedResource Remove="card-module\**" />
-    <None Remove="admin-module\**" />
     <None Remove="card-module\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="admin-module\core\ports\" />
+    <Folder Include="admin-module\core\presenters\" />
+    <Folder Include="admin-module\core\use-cases\" />
+    <Folder Include="admin-module\repositories\" />
+    <Folder Include="admin-module\view\" />
   </ItemGroup>
 
 </Project>
