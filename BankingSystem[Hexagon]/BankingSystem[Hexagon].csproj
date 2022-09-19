@@ -15,9 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="admin-module\core\ports\" />
     <Folder Include="admin-module\core\presenters\" />
-    <Folder Include="admin-module\core\use-cases\" />
     <Folder Include="admin-module\repositories\" />
     <Folder Include="admin-module\view\" />
   </ItemGroup>
