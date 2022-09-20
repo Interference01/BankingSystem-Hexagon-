@@ -1,9 +1,6 @@
 ﻿using BankingSystem_Hexagon_.admin_module.core.exception;
 using BankingSystem_Hexagon_.admin_module.core.models;
 using BankingSystem_Hexagon_.admin_module.core.ports;
-using System.Net.Mail;
-using System;
-using System.Text.RegularExpressions;
 using FieldValidationLib;
 
 namespace BankingSystem_Hexagon_.admin_module.core.use_cases {
