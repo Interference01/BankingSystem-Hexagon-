@@ -20,4 +20,8 @@
     <Folder Include="admin-module\view\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FieldValidationLib\FieldValidationLib.csproj" />
+  </ItemGroup>
+
 </Project>
