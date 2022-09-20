@@ -1,6 +1,6 @@
 ﻿
 namespace BankingSystem_Hexagon_.auth_module.models {
-    internal class User {
+    public class User {
         public Guid Id { get; set; }
         public Role _Role { get; set; }
 
