@@ -15,13 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="admin-module\core\presenters\" />
-    <Folder Include="admin-module\repositories\" />
-    <Folder Include="admin-module\view\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\FieldValidationLib\FieldValidationLib.csproj" />
+    <PackageReference Include="NSubstitute" Version="4.4.0" />
   </ItemGroup>
 
 </Project>
