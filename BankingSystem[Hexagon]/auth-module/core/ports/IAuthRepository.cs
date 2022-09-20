@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.auth_module.core.ports {
-    internal interface IAuthRepository {
+    public interface IAuthRepository {
         public User? GetUser(string login, string password);
     }
 }

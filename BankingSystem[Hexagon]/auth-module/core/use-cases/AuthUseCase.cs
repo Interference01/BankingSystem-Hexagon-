@@ -1,13 +1,8 @@
 ﻿using BankingSystem_Hexagon_.auth_module.core.ports;
 using BankingSystem_Hexagon_.auth_module.models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.auth_module.use_cases {
-    internal class AuthUseCase {
+    public class AuthUseCase {
         private readonly IAuthRepository authRepository;
         public AuthUseCase(IAuthRepository authRepository) {
             this.authRepository = authRepository;

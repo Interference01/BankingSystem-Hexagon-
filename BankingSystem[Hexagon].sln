@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingSystem[Hexagon]", "BankingSystem[Hexagon]\BankingSystem[Hexagon].csproj", "{65E68A42-2BC5-40C2-B6B0-A46D64B292A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingSystem[Hexagon]", "BankingSystem[Hexagon]\BankingSystem[Hexagon].csproj", "{65E68A42-2BC5-40C2-B6B0-A46D64B292A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankSystemTest", "BankSystemTest\BankSystemTest.csproj", "{B7828DF9-6019-4D2A-A1F0-613A4DC93F0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{65E68A42-2BC5-40C2-B6B0-A46D64B292A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65E68A42-2BC5-40C2-B6B0-A46D64B292A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65E68A42-2BC5-40C2-B6B0-A46D64B292A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7828DF9-6019-4D2A-A1F0-613A4DC93F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7828DF9-6019-4D2A-A1F0-613A4DC93F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7828DF9-6019-4D2A-A1F0-613A4DC93F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7828DF9-6019-4D2A-A1F0-613A4DC93F0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

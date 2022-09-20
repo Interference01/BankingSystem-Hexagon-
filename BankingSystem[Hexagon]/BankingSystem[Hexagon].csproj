@@ -17,4 +17,8 @@
     <None Remove="card-module\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NSubstitute" Version="4.4.0" />
+  </ItemGroup>
+
 </Project>
