@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.admin_module.core.models
 {
-    internal class Client
+    public class Client
     {
         public string Name { get; set; }
         public string Surname { get; set; }

@@ -5,12 +5,12 @@ namespace FieldValidationLib {
     public static class FieldValidation {
         public static void LengthValidate(string fieldName, string value, int maxLength) {
             if (value.Length >= maxLength) {
-                throw new ValidationException($"Max length for field {fieldName} 20");
+                throw new ValidationException($"Max length for field {fieldName} {maxLength}");
             }
         }
 
         public static void PasswordValidate(string password) {
-            if (password.Length < 8 && password.Any(char.IsUpper) && password.Any(char.IsSymbol)) {
+            if (password.Length < 8 || !password.Any(char.IsUpper) || !password.Any(char.IsSymbol)) {
                 throw new ValidationException("Password must be no more 8 lenght, one upper letter and one any symbol");
             }
         }

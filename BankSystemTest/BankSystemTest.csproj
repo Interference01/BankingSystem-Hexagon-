@@ -25,6 +25,8 @@
   <ItemGroup>
     <Folder Include="auth-module\core\presenters\" />
     <Folder Include="auth-module\repositories\" />
+    <Folder Include="register-module\core\presenters\" />
+    <Folder Include="register-module\repositories\" />
   </ItemGroup>
 
   <ItemGroup>

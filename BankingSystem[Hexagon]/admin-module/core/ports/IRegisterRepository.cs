@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.admin_module.core.ports
 {
-    internal interface IRegisterRepository
+    public interface IRegisterRepository
     {
         public void SaveClient(Client client);
     }

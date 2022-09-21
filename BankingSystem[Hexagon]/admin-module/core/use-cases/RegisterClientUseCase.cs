@@ -4,7 +4,7 @@ using BankingSystem_Hexagon_.admin_module.core.ports;
 using FieldValidationLib;
 
 namespace BankingSystem_Hexagon_.admin_module.core.use_cases {
-    internal class RegisterClientUseCase {
+    public class RegisterClientUseCase {
         private readonly IRegisterRepository registerRepository;
         public RegisterClientUseCase(IRegisterRepository registerRepository) {
             this.registerRepository = registerRepository;
