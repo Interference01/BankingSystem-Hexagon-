@@ -44,20 +44,25 @@ namespace BankSystemTest.registr_module.core.use_cases {
                 Phone = "+380663412222"
             };
             var repository = Substitute.For<IRegisterRepository>();
-            repository.SaveClient(client);
+            bool saved = true;
+            var expectedErrorMessage = "Email not validate";
 
             var registerUseCase = new RegisterClientUseCase(repository);
-            bool saved = true;
+
 
             //When
+            string actualErrorMessage = "";
+
             try {
                 registerUseCase.Register(client);
-            } catch {
+            } catch (Exception e) {
+                actualErrorMessage = e.Message;
                 saved = false;
             }
 
             //Then
             Assert.False(saved);
+            Assert.Equal(expectedErrorMessage, actualErrorMessage);
         }
 
 
@@ -72,20 +77,25 @@ namespace BankSystemTest.registr_module.core.use_cases {
                 Phone = "+380663412222"
             };
             var repository = Substitute.For<IRegisterRepository>();
-            repository.SaveClient(client);
+            bool saved = true;
+            var expectedErrorMessage = "Password must be no more 8 lenght, one upper letter and one any symbol";
 
             var registerUseCase = new RegisterClientUseCase(repository);
-            bool saved = true;
+
 
             //When
+            string actualErrorMessage = "";
+
             try {
                 registerUseCase.Register(client);
-            } catch {
+            } catch (Exception e) {
+                actualErrorMessage = e.Message;
                 saved = false;
             }
 
             //Then
             Assert.False(saved);
+            Assert.Equal(expectedErrorMessage, actualErrorMessage);
         }
 
 
@@ -100,20 +110,25 @@ namespace BankSystemTest.registr_module.core.use_cases {
                 Phone = "+380663412222"
             };
             var repository = Substitute.For<IRegisterRepository>();
-            repository.SaveClient(client);
+            bool saved = true;
+            var expectedErrorMessage = "Max length for field Name 20";
 
             var registerUseCase = new RegisterClientUseCase(repository);
-            bool saved = true;
+
 
             //When
+            string actualErrorMessage = "";
+
             try {
                 registerUseCase.Register(client);
-            } catch {
+            } catch (Exception e){
+                actualErrorMessage = e.Message;
                 saved = false;
             }
 
             //Then
             Assert.False(saved);
+            Assert.Equal(expectedErrorMessage, actualErrorMessage);
         }
 
 
@@ -128,20 +143,25 @@ namespace BankSystemTest.registr_module.core.use_cases {
                 Phone = "+380663412222"
             };
             var repository = Substitute.For<IRegisterRepository>();
-            repository.SaveClient(client);
+            bool saved = true;
+            var expectedErrorMessage = "Max length for field Surname 20";
 
             var registerUseCase = new RegisterClientUseCase(repository);
-            bool saved = true;
+
 
             //When
+            string actualErrorMessage = "";
+
             try {
                 registerUseCase.Register(client);
-            } catch {
+            } catch (Exception e) {
+                actualErrorMessage = e.Message;
                 saved = false;
             }
 
             //Then
             Assert.False(saved);
+            Assert.Equal(expectedErrorMessage, actualErrorMessage);
         }
 
 
@@ -156,20 +176,25 @@ namespace BankSystemTest.registr_module.core.use_cases {
                 Phone = "+3806634122222222222222222222222222"
             };
             var repository = Substitute.For<IRegisterRepository>();
-            repository.SaveClient(client);
+            bool saved = true;
+            var expectedErrorMessage = "Max length for field Phone 14";
 
             var registerUseCase = new RegisterClientUseCase(repository);
-            bool saved = true;
+
 
             //When
+            string actualErrorMessage = "";
+
             try {
                 registerUseCase.Register(client);
-            } catch {
+            } catch (Exception e) {
+                actualErrorMessage = e.Message;
                 saved = false;
             }
 
             //Then
             Assert.False(saved);
+            Assert.Equal(expectedErrorMessage, actualErrorMessage);
         }
 
     }
