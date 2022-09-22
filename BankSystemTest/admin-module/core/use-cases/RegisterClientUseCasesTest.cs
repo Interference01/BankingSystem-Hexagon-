@@ -16,10 +16,10 @@ namespace BankSystemTest.registr_module.core.use_cases {
                 Phone = "+380663412222"
             };
             var repository = Substitute.For<IRegisterRepository>();
-            repository.SaveClient(client);
+            bool saved = true;
 
             var registerUseCase = new RegisterClientUseCase(repository);
-            bool saved = true;
+            
 
             //When
             try {
