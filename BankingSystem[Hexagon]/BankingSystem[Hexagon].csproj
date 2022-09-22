@@ -9,16 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="admin-module\**" />
     <Compile Remove="card-module\**" />
-    <EmbeddedResource Remove="admin-module\**" />
     <EmbeddedResource Remove="card-module\**" />
-    <None Remove="admin-module\**" />
     <None Remove="card-module\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="NSubstitute" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FieldValidationLib\FieldValidationLib.csproj" />
   </ItemGroup>
 
 </Project>
