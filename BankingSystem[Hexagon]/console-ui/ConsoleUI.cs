@@ -3,6 +3,8 @@
 namespace BankingSystem_Hexagon_.console_ui {
     internal class ConsoleUI {
         public IPage CurrentPage { get; set; }
+        public IPage HomePage { get; set; }
+
 
         public void Show(IPage page) {
             Console.Clear();
@@ -11,9 +13,14 @@ namespace BankingSystem_Hexagon_.console_ui {
 
             page.ShowContent();
         }
+
+        public void ShowHomePage() {
+            Show(HomePage);
+        }
+
         public void Rerender() {
             if (CurrentPage != null) {
-                Thread.Sleep(1000);
+                Thread.Sleep(6000);
                 Show(CurrentPage);
             }
         }
