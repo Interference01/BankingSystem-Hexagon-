@@ -20,7 +20,7 @@ namespace BankingSystem_Hexagon_
 
             var clientPage = new ClientPage();
             var adminPage = new AdminPage();
-            var authView = new AuthConsoleView(consoleUI, clientPage, adminPage);
+            var authView = new ConsoleAuthView(consoleUI, clientPage, adminPage);
             var authPresenter = new AuthPresenter(authUseCase, authView);
 
             var authPage = new AuthPage(authPresenter);

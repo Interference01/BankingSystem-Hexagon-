@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.auth_module.view {
-    internal class AuthConsoleView : IAuthView {
+    internal class ConsoleAuthView : IAuthView {
         private readonly ConsoleUI consoleUI;
         private readonly IPage clientPage;
         private readonly IPage adminPage;
-        public AuthConsoleView(ConsoleUI consoleUI, IPage clientPage, IPage adminPage) {
+        public ConsoleAuthView(ConsoleUI consoleUI, IPage clientPage, IPage adminPage) {
             this.consoleUI = consoleUI;
             this.clientPage = clientPage;
             this.adminPage = adminPage;
