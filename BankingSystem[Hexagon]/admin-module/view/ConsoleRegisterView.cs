@@ -9,17 +9,15 @@ using System.Threading.Tasks;
 namespace BankingSystem_Hexagon_.admin_module.core.view {
     internal class ConsoleRegisterView : IRegisterClientView {
         private readonly ConsoleUI consoleUI;
-        private readonly IPage adminPage;
-        public ConsoleRegisterView(ConsoleUI consoleUI, IPage adminPage) {
+        public ConsoleRegisterView(ConsoleUI consoleUI) {
             this.consoleUI = consoleUI;
-            this.adminPage = adminPage;
         }
         public void ShowSuccessInfo() {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("The client is successfully registered");
             Console.ForegroundColor = ConsoleColor.White;
 
-            consoleUI.Show(adminPage);
+            consoleUI.Rerender();
         }
         public void ShowRegisterValidation(string message) {
             Console.ForegroundColor = ConsoleColor.Red;
