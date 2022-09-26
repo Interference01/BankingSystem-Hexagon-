@@ -4,9 +4,11 @@ using BankingSystem_Hexagon_.admin_module.core.presenters;
 namespace BankingSystem_Hexagon_.console_ui.pages {
     internal class AdminPage : IPage {
         private readonly RegisterClientPresenter registerClientPresenter;
+        private readonly ShowClientsPresenter showClientsPresenter;
         private readonly ConsoleUI consoleUI;
-        public AdminPage(RegisterClientPresenter registerClientPresenter, ConsoleUI consoleUI) {
+        public AdminPage(RegisterClientPresenter registerClientPresenter,ShowClientsPresenter showClientsPresenter, ConsoleUI consoleUI) {
             this.registerClientPresenter = registerClientPresenter;
+            this.showClientsPresenter = showClientsPresenter;
             this.consoleUI = consoleUI;
         }
 
@@ -15,12 +17,17 @@ namespace BankingSystem_Hexagon_.console_ui.pages {
 
             Console.WriteLine(
                 "\t1 - Register new client \n" +
+                "\t2 - Show all clients \n" +
                 "\t0 - Exit"
             );
             var command = Console.ReadLine();
             switch (command) {
                 case "1":
                 RegisterUser();
+                break;
+
+                case "2":
+                ShowClientList();
                 break;
 
                 case "0":
@@ -45,6 +52,10 @@ namespace BankingSystem_Hexagon_.console_ui.pages {
             client.Phone = Console.ReadLine();
 
             registerClientPresenter.RegisterClient(client);
+        }
+
+        private void ShowClientList() {
+            showClientsPresenter.ShowClients();
         }
     }
 }
