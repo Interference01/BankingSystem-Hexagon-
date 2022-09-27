@@ -20,7 +20,7 @@ namespace BankingSystem_Hexagon_.console_ui {
 
         public void Rerender() {
             if (CurrentPage != null) {
-                Thread.Sleep(6000);
+                Console.ReadKey();
                 Show(CurrentPage);
             }
         }

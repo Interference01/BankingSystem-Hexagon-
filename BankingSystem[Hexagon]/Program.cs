@@ -2,6 +2,7 @@
 using BankingSystem_Hexagon_.admin_module.core.use_cases;
 using BankingSystem_Hexagon_.admin_module.core.view;
 using BankingSystem_Hexagon_.admin_module.repositories;
+using BankingSystem_Hexagon_.admin_module.view;
 using BankingSystem_Hexagon_.auth_module.core.ports;
 using BankingSystem_Hexagon_.auth_module.core.presenters;
 using BankingSystem_Hexagon_.auth_module.models;
@@ -25,8 +26,13 @@ namespace BankingSystem_Hexagon_ {
             var consoleRegisterView = new ConsoleRegisterView(consoleUI);
             var registerClientPresenter = new RegisterClientPresenter(consoleRegisterView, registerClientUseCase);
 
+            var showClientsRepository = new FileShowClientsRepository(fileStore);
+            var showClientsUseCase = new ShowClientsUseCace(showClientsRepository);
+            var consoleShowClientsView = new ConsoleShowClientsView(consoleUI);
+            var showClientsPresenter = new ShowClientsPresenter(showClientsUseCase, consoleShowClientsView);
+
             var clientPage = new ClientPage();
-            var adminPage = new AdminPage(registerClientPresenter, consoleUI);
+            var adminPage = new AdminPage(registerClientPresenter, showClientsPresenter, consoleUI);
 
             var authView = new ConsoleAuthView(consoleUI, clientPage, adminPage);
             var authPresenter = new AuthPresenter(authUseCase, authView);
