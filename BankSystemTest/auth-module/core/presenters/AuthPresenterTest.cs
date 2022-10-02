@@ -2,6 +2,7 @@
 using BankingSystem_Hexagon_.auth_module.core.presenters;
 using BankingSystem_Hexagon_.auth_module.models;
 using BankingSystem_Hexagon_.auth_module.use_cases;
+using Bogus;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
 using NSubstitute.ReturnsExtensions;
@@ -61,8 +62,9 @@ namespace BankSystemTest.auth_module.core.presenters {
         [Fact]
         public void LoginForIncorrectUser() {
             //Given
-            var login = "val@gmail.com";
-            var password = "11111";
+            var faker = new Faker();
+            var login = faker.Random.String(10);
+            var password = faker.Internet.Password();
             var error = new Exception("Invalid login or pass");
 
             var repository = Substitute.For<IAuthRepository>();
