@@ -22,6 +22,8 @@ namespace BankSystemTest.auth_module.core.use_cases {
 
             //Then
             Assert.Equal(expectedUser, actual);
+
+            repository.Received().GetUser(login, password);
         }
 
         [Fact]
