@@ -14,7 +14,7 @@ namespace BankingSystem_Hexagon_ {
                     Id = Guid.NewGuid(),
                     Name = "Vlad",
                     Surname = "Mertvech",
-                    Email = "v@gmail.com",
+                    Email = "v@g.com",
                     Password = "1111",
                     Phone = "+380665047766",
                     Role = "A"
@@ -47,6 +47,11 @@ namespace BankingSystem_Hexagon_ {
             public string Password { get; set; }
             public string Phone { get; set; }
             public string Role { get; set; }
+            public Card? Card { get; set; }
+        }
+
+        public class Card {
+            public string? Number { get; set; }
         }
     }
 }

@@ -27,12 +27,17 @@ namespace BankingSystem_Hexagon_ {
             var registerClientPresenter = new RegisterClientPresenter(consoleRegisterView, registerClientUseCase);
 
             var showClientsRepository = new FileShowClientsRepository(fileStore);
-            var showClientsUseCase = new ShowClientsUseCace(showClientsRepository);
+            var showClientsUseCase = new GetClientsUseCase(showClientsRepository);
             var consoleShowClientsView = new ConsoleShowClientsView(consoleUI);
             var showClientsPresenter = new ShowClientsPresenter(showClientsUseCase, consoleShowClientsView);
 
+            var addCardRepository = new FileAddCardRepository(fileStore);
+            var addCardUseCase = new AddCardUseCase(addCardRepository);
+            var consoleAddCardView = new ConsoleAddCardView(consoleUI);
+            var addCardPresenter = new AddCardPresenter(addCardUseCase, consoleAddCardView);
+
             var clientPage = new ClientPage();
-            var adminPage = new AdminPage(registerClientPresenter, showClientsPresenter, consoleUI);
+            var adminPage = new AdminPage(registerClientPresenter, showClientsPresenter, addCardPresenter, consoleUI);
 
             var authView = new ConsoleAuthView(consoleUI, clientPage, adminPage);
             var authPresenter = new AuthPresenter(authUseCase, authView);

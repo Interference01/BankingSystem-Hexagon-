@@ -2,13 +2,14 @@
 using BankingSystem_Hexagon_.admin_module.core.ports;
 
 namespace BankingSystem_Hexagon_.admin_module.core.use_cases {
-    internal class ShowClientsUseCace {
-        private readonly IShowClientsRepository showClientsRepository;
-        public ShowClientsUseCace(IShowClientsRepository showClientsRepository) {
+    internal class GetClientsUseCase {
+        private readonly IGetClientsRepository showClientsRepository;
+
+        public GetClientsUseCase(IGetClientsRepository showClientsRepository) {
             this.showClientsRepository = showClientsRepository;
         }
 
-        public Client[] ShowClients() {
+        public Client[] GetClients() {
             var clients = showClientsRepository.GetAllClients();
             
             return clients;

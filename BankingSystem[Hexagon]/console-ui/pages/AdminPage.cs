@@ -5,10 +5,12 @@ namespace BankingSystem_Hexagon_.console_ui.pages {
     internal class AdminPage : IPage {
         private readonly RegisterClientPresenter registerClientPresenter;
         private readonly ShowClientsPresenter showClientsPresenter;
+        private readonly AddCardPresenter addCardPresenter;
         private readonly ConsoleUI consoleUI;
-        public AdminPage(RegisterClientPresenter registerClientPresenter,ShowClientsPresenter showClientsPresenter, ConsoleUI consoleUI) {
+        public AdminPage(RegisterClientPresenter registerClientPresenter,ShowClientsPresenter showClientsPresenter, AddCardPresenter addCardPresenter, ConsoleUI consoleUI) {
             this.registerClientPresenter = registerClientPresenter;
             this.showClientsPresenter = showClientsPresenter;
+            this.addCardPresenter = addCardPresenter;
             this.consoleUI = consoleUI;
         }
 
@@ -18,6 +20,7 @@ namespace BankingSystem_Hexagon_.console_ui.pages {
             Console.WriteLine(
                 "\t1 - Register new client \n" +
                 "\t2 - Show all clients \n" +
+                "\t3 - Add card for client \n" +
                 "\t0 - Exit"
             );
             var command = Console.ReadLine();
@@ -28,6 +31,10 @@ namespace BankingSystem_Hexagon_.console_ui.pages {
 
                 case "2":
                 ShowClientList();
+                break;
+
+                case "3":
+                AddCard();
                 break;
 
                 case "0":
@@ -56,6 +63,13 @@ namespace BankingSystem_Hexagon_.console_ui.pages {
 
         private void ShowClientList() {
             showClientsPresenter.ShowClients();
+        }
+
+        private void AddCard() {
+            Console.Write("Input login: ");
+            string email = Console.ReadLine();
+
+            addCardPresenter.AddCard(email);
         }
     }
 }

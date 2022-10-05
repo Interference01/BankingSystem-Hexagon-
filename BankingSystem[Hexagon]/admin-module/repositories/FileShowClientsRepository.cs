@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.admin_module.repositories {
-    internal class FileShowClientsRepository : IShowClientsRepository {
+    internal class FileShowClientsRepository : IGetClientsRepository {
         private readonly FileStore fileStore;
 
         public FileShowClientsRepository(FileStore fileStore) {
