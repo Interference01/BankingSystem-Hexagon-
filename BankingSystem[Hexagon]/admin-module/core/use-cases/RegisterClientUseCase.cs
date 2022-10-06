@@ -9,7 +9,7 @@ namespace BankingSystem_Hexagon_.admin_module.core.use_cases {
         public RegisterClientUseCase(IRegisterRepository registerRepository) {
             this.registerRepository = registerRepository;
         }
-        public void Register(Client client) {
+        public virtual void Register(Client client) {
 
             FieldValidation.LengthValidate("Name", client.Name, 20);
             FieldValidation.LengthValidate("Surname", client.Surname, 20);
