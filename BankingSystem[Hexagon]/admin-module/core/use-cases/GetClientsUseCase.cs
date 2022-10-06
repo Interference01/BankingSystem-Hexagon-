@@ -11,7 +11,7 @@ namespace BankingSystem_Hexagon_.admin_module.core.use_cases {
 
         public Client[] GetClients() {
             var clients = showClientsRepository.GetAllClients();
-            
+
             return clients;
         }
     }

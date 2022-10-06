@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.admin_module.core.exception {
     internal class ValidationException : Exception {
-        public ValidationException(string e) {
+        public ValidationException(string message) : base(message) {
 
         }
     }

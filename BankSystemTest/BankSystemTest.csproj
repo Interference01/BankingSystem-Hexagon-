@@ -23,9 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="auth-module\core\presenters\" />
     <Folder Include="auth-module\repositories\" />
-    <Folder Include="admin-module\core\presenters\" />
     <Folder Include="admin-module\repositories\" />
   </ItemGroup>
 
