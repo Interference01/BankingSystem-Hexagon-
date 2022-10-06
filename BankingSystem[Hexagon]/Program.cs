@@ -12,7 +12,7 @@ using BankingSystem_Hexagon_.console_ui.pages;
 using Newtonsoft.Json;
 
 namespace BankingSystem_Hexagon_ {
-    internal class Program {
+    internal class Program { //fix
         static void Main(string[] args) {
             var consoleUI = new ConsoleUI();
             var fileStore = FileStore.CreateFileStore();
