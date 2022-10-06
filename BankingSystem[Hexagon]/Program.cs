@@ -3,23 +3,23 @@ using BankingSystem_Hexagon_.admin_module.core.use_cases;
 using BankingSystem_Hexagon_.admin_module.core.view;
 using BankingSystem_Hexagon_.admin_module.repositories;
 using BankingSystem_Hexagon_.admin_module.view;
-using BankingSystem_Hexagon_.auth_module.core.ports;
 using BankingSystem_Hexagon_.auth_module.core.presenters;
-using BankingSystem_Hexagon_.auth_module.models;
 using BankingSystem_Hexagon_.auth_module.repositories;
 using BankingSystem_Hexagon_.auth_module.use_cases;
 using BankingSystem_Hexagon_.auth_module.view;
 using BankingSystem_Hexagon_.console_ui;
 using BankingSystem_Hexagon_.console_ui.pages;
+using Newtonsoft.Json;
 
 namespace BankingSystem_Hexagon_ {
     internal class Program {
         static void Main(string[] args) {
             var consoleUI = new ConsoleUI();
-            var fileStore = new FileStore();
+            var fileStore = FileStore.CreateFileStore();
 
             var authRepo = new FileAuthRepository(fileStore);
-            var authUseCase = new AuthUseCase(authRepo);
+            var authRepoDecorator = new AuthRepositorySaveNameToFileDecorator(authRepo);
+            var authUseCase = new AuthUseCase(authRepoDecorator);
 
             var registerRepository = new FileRegisterRepository(fileStore);
             var registerClientUseCase = new RegisterClientUseCase(registerRepository);

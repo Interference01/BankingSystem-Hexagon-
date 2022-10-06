@@ -22,13 +22,18 @@ namespace BankingSystem_Hexagon_.admin_module.repositories {
             return users.Any(x => x.Card != null && x.Card.Number == numberCard);
         }
 
-        public void SaveCard(Guid guid, string numberCard) {
+        public void SaveCard(Guid userId, string numberCard) {
             var users = fileStore.GetAllUsers();
-            var user = users.Where(user => user.Id == guid).ToList();
+            var user = users.First(user => user.Id == userId);
 
-            user[0].Card = new Card() {
+            if (user.Card == null) {
+                throw new Exception("This user has a card");
+            }
+
+            user.Card = new CardDTO() {
                 Number = numberCard,
             };
+
         }
     }
 }
