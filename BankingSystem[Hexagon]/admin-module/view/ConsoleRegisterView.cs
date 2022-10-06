@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.admin_module.core.view {
-    internal class ConsoleRegisterView : IRegisterClientView {
+    internal class ConsoleRegisterView : IRegisterView {
         private readonly ConsoleUI consoleUI;
         public ConsoleRegisterView(ConsoleUI consoleUI) {
             this.consoleUI = consoleUI;

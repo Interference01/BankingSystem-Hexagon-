@@ -2,17 +2,17 @@
 using BankingSystem_Hexagon_.admin_module.core.use_cases;
 
 namespace BankingSystem_Hexagon_.admin_module.core.presenters {
-    public class ShowClientsPresenter {
-        private readonly ShowClientsUseCace showClientUse;
+    internal class ShowClientsPresenter {
+        private readonly GetClientsUseCase showClientUse;
         private readonly IShowClientsView showClientsView;
 
-        public ShowClientsPresenter(ShowClientsUseCace showClientsUseCace, IShowClientsView showClientsView) {
+        public ShowClientsPresenter(GetClientsUseCase showClientsUseCace, IShowClientsView showClientsView) {
             this.showClientUse = showClientsUseCace;
             this.showClientsView = showClientsView;
         }
 
         public void ShowClients() {
-            var clients = showClientUse.ShowClients();
+            var clients = showClientUse.GetClients();
 
             if (clients.Length > 0) {
                 showClientsView.ShowClientInfo(clients);
