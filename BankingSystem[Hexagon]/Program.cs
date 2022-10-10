@@ -12,7 +12,7 @@ using BankingSystem_Hexagon_.console_ui.pages;
 using Newtonsoft.Json;
 
 namespace BankingSystem_Hexagon_ {
-    internal class Program { //fix
+    internal class Program { 
         static void Main(string[] args) {
             var consoleUI = new ConsoleUI();
             var fileStore = FileStore.CreateFileStore();
@@ -36,7 +36,7 @@ namespace BankingSystem_Hexagon_ {
             var consoleAddCardView = new ConsoleAddCardView(consoleUI);
             var addCardPresenter = new AddCardPresenter(addCardUseCase, consoleAddCardView);
 
-            var clientPage = new ClientPage();
+            var clientPage = new ClientPage(consoleUI);
             var adminPage = new AdminPage(registerClientPresenter, showClientsPresenter, addCardPresenter, consoleUI);
 
             var authView = new ConsoleAuthView(consoleUI, clientPage, adminPage);
@@ -45,6 +45,7 @@ namespace BankingSystem_Hexagon_ {
 
             consoleUI.HomePage = authPage;
             consoleUI.ShowHomePage();
+
 
             Console.ReadKey();
         }

@@ -21,6 +21,8 @@ namespace BankingSystem_Hexagon_.auth_module.core.presenters {
                 } else {
                     authView.ShowClientContent(user);
                 }
+
+                authView.SetCurrentUser(user);
             } catch (Exception e) {
                 authView.ShowError(e.Message);
             }

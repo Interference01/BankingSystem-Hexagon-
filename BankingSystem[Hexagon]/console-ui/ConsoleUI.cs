@@ -1,7 +1,9 @@
-﻿using BankingSystem_Hexagon_.console_ui.pages;
+﻿using BankingSystem_Hexagon_.auth_module.models;
+using BankingSystem_Hexagon_.console_ui.pages;
 
 namespace BankingSystem_Hexagon_.console_ui {
-    internal class ConsoleUI {
+    public class ConsoleUI {
+        public User CurrentUser { get; set; }
         public IPage CurrentPage { get; set; }
         public IPage HomePage { get; set; }
 
