@@ -9,12 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="card-module\**" />
-    <EmbeddedResource Remove="card-module\**" />
-    <None Remove="card-module\**" />
-  </ItemGroup>
-
-  <ItemGroup>
 	<PackageReference Include="Bogus" Version="34.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
     <PackageReference Include="NSubstitute" Version="4.4.0" />
@@ -22,6 +16,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FieldValidationLib\FieldValidationLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="card-module\core\exceptions\" />
   </ItemGroup>
 
 </Project>

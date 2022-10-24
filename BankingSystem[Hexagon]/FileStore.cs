@@ -43,7 +43,9 @@ namespace BankingSystem_Hexagon_ {
         }
         [Serializable]
         public class CardDTO {
+            public Guid Id { get; set; }
             public string? Number { get; set; }
+            public float Balance { get; set; }
         }
     }
 }

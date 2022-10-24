@@ -2,29 +2,29 @@
 using BankingSystem_Hexagon_.auth_module.models;
 using BankingSystem_Hexagon_.console_ui;
 using BankingSystem_Hexagon_.console_ui.pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.auth_module.view {
     internal class ConsoleAuthView : IAuthView {
-        private readonly ConsoleUI consoleUI;
-        private readonly IPage clientPage;
-        private readonly IPage adminPage;
+        private readonly ConsoleUI ConsoleUI;
+        private readonly IPage ClientPage;
+        private readonly IPage AdminPage;
+
         public ConsoleAuthView(ConsoleUI consoleUI, IPage clientPage, IPage adminPage) {
-            this.consoleUI = consoleUI;
-            this.clientPage = clientPage;
-            this.adminPage = adminPage;
+            this.ConsoleUI = consoleUI;
+            this.ClientPage = clientPage;
+            this.AdminPage = adminPage;
+        }
+
+        public void SetCurrentUser(User user) {
+            ConsoleUI.CurrentUser = user;
         }
 
         public void ShowAdminContent(User user) {
-            consoleUI.Show(adminPage);
+            ConsoleUI.Show(AdminPage);
         }
 
         public void ShowClientContent(User user) {
-            consoleUI.Show(clientPage);
+            ConsoleUI.Show(ClientPage);
         }
 
         public void ShowError(string message) {
@@ -32,7 +32,7 @@ namespace BankingSystem_Hexagon_.auth_module.view {
             Console.WriteLine(message);
             Console.ForegroundColor = ConsoleColor.White;
 
-            consoleUI.Rerender();
+            ConsoleUI.Rerender();
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using BankingSystem_Hexagon_.auth_module.core.ports;
 using BankingSystem_Hexagon_.auth_module.models;
-using BankingSystem_Hexagon_.auth_module.repositories.models;
-using System.Linq;
 
 namespace BankingSystem_Hexagon_.auth_module.repositories {
     internal class FileAuthRepository : IAuthRepository {

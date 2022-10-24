@@ -9,7 +9,7 @@ namespace BankingSystem_Hexagon_.admin_module.core.use_cases {
             this.cardRepository = cardRepository;
         }
 
-        public void AddCardForClient(Guid id) {
+        public void AddCardForClient(Guid id) { //
             string numberCard;
 
             while (true) {
