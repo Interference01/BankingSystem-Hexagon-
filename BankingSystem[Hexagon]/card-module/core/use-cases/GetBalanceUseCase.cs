@@ -1,5 +1,4 @@
-﻿
-using BankingSystem_Hexagon_.card_module.repositories;
+﻿using BankingSystem_Hexagon_.card_module.repositories;
 
 namespace BankingSystem_Hexagon_.card_module.core.use_cases {
     public class GetBalanceUseCase {
@@ -8,10 +7,14 @@ namespace BankingSystem_Hexagon_.card_module.core.use_cases {
             this.balanceRepository = balanceRepository;
         }
 
-        public float GetBalance() {
-            var balance = balanceRepository.GetBalanceCard();
+        public float GetBalance(Guid id) {
+            var card = balanceRepository.GetCard(id);
 
-            return balance;
+            if (card == null) {
+                throw new Exception("You don't have the card");
+            }
+
+            return card.Balance;
         }
     }
 }

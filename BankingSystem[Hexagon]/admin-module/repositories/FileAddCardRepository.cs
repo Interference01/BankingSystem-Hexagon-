@@ -26,7 +26,7 @@ namespace BankingSystem_Hexagon_.admin_module.repositories {
             var users = fileStore.GetAllUsers();
             var user = users.First(user => user.Id == userId);
 
-            if (user.Card == null) {
+            if (user.Card != null) {
                 throw new Exception("This user has a card");
             }
 

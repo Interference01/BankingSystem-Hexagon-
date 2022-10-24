@@ -45,6 +45,7 @@ namespace BankingSystem_Hexagon_.console_ui.pages {
                 break;
             }
         }
+
         private void RegisterUser() {
             Client client = new Client();
             Console.Write("Input name: ");

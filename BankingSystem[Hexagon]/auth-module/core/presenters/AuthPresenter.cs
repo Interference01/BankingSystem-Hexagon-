@@ -16,13 +16,13 @@ namespace BankingSystem_Hexagon_.auth_module.core.presenters {
             try {
                 var user = authUseCase.Login(login, password);
 
+                authView.SetCurrentUser(user);
+
                 if (user._Role == User.Role.Admin) {
                     authView.ShowAdminContent(user);
                 } else {
                     authView.ShowClientContent(user);
                 }
-
-                authView.SetCurrentUser(user);
             } catch (Exception e) {
                 authView.ShowError(e.Message);
             }

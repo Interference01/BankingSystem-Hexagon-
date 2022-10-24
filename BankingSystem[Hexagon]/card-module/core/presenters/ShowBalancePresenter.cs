@@ -1,5 +1,4 @@
-﻿
-using BankingSystem_Hexagon_.card_module.core.ports;
+﻿using BankingSystem_Hexagon_.card_module.core.ports;
 using BankingSystem_Hexagon_.card_module.core.use_cases;
 
 namespace BankingSystem_Hexagon_.card_module.core.presenters {
@@ -11,10 +10,16 @@ namespace BankingSystem_Hexagon_.card_module.core.presenters {
             this.showBalanceView = showBalanceView;
         }
 
-        public void ShowBalance() {
-            var balance = balanceUseCase.GetBalance();
+        public void ShowBalanceCard(Guid id) {
+            try {
+                var balance = balanceUseCase.GetBalance(id);
 
-            showBalanceView.ShowBalance(balance);
+                showBalanceView.ShowBalance(balance);
+            } catch (Exception) {
+
+                throw;
+            }
+
         }
     }
 }

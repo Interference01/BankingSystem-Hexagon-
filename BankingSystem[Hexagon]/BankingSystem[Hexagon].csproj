@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="card-module\core\exceptions\" />
-    <Folder Include="card-module\view\" />
   </ItemGroup>
 
 </Project>
