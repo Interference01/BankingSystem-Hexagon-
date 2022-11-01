@@ -15,9 +15,8 @@ namespace BankingSystem_Hexagon_.card_module.core.presenters {
                 var balance = balanceUseCase.GetBalance(id);
 
                 showBalanceView.ShowBalance(balance);
-            } catch (Exception) {
-
-                throw;
+            } catch (Exception e) {
+                showBalanceView.ShowErrorCard(e.Message);
             }
 
         }

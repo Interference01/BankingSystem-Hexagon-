@@ -54,6 +54,7 @@
             this.Controls.Add(this.lInfo);
             this.Name = "ClientForm";
             this.Text = "ClientPage";
+            this.Load += new System.EventHandler(this.ClientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

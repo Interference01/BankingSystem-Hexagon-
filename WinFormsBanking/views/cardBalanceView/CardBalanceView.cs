@@ -13,5 +13,9 @@ namespace WinFormsBanking.views.cardBalanceView
         {
             cardBalanceState.ShowBalance(balance);
         }
+
+        public void ShowErrorCard(string message) {
+            MessageBox.Show(message);
+        }
     }
 }

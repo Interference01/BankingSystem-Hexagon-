@@ -13,5 +13,9 @@ namespace BankingSystem_Hexagon_.card_module.view {
 
             consoleUI.Rerender();
         }
+
+        public void ShowErrorCard(string message) {
+            Console.WriteLine(message);
+        }
     }
 }
