@@ -23,25 +23,36 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lInfo = new System.Windows.Forms.Label();
+            this.bShowBalance = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lInfo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(344, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Client";
+            this.lInfo.AutoSize = true;
+            this.lInfo.Location = new System.Drawing.Point(12, 9);
+            this.lInfo.Name = "lInfo";
+            this.lInfo.Size = new System.Drawing.Size(35, 20);
+            this.lInfo.TabIndex = 0;
+            this.lInfo.Text = "Info";
             // 
-            // ClientPage
+            // bShowBalance
+            // 
+            this.bShowBalance.Location = new System.Drawing.Point(66, 57);
+            this.bShowBalance.Name = "bShowBalance";
+            this.bShowBalance.Size = new System.Drawing.Size(145, 52);
+            this.bShowBalance.TabIndex = 1;
+            this.bShowBalance.Text = "button1";
+            this.bShowBalance.UseVisualStyleBackColor = true;
+            // 
+            // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Name = "ClientPage";
+            this.ClientSize = new System.Drawing.Size(916, 582);
+            this.Controls.Add(this.bShowBalance);
+            this.Controls.Add(this.lInfo);
+            this.Name = "ClientForm";
             this.Text = "ClientPage";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -50,6 +61,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lInfo;
+        private Button bShowBalance;
     }
 }

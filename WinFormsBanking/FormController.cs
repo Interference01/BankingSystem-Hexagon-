@@ -1,6 +1,4 @@
-﻿using BankingSystem_Hexagon_.console_ui.pages;
-using WinFormsBanking.views;
-
+﻿
 namespace WinFormsBanking {
     public class FormController {
         public Form CurrentForm { get; set; }

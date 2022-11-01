@@ -3,7 +3,7 @@ using BankingSystem_Hexagon_.admin_module.core.use_cases;
 using BankingSystem_Hexagon_.admin_module.core.view;
 
 namespace BankingSystem_Hexagon_.admin_module.core.presenters {
-    internal class RegisterClientPresenter {
+    public class RegisterClientPresenter {
         private IRegisterView registerClientView;
         private RegisterClientUseCase registerClientUseCase;
 

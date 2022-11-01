@@ -5,9 +5,13 @@ using WinFormsBanking.forms;
 namespace WinFormsBanking.views {
     public class AuthView : IAuthView {
         private readonly FormController formController;
+        private readonly AdminForm adminForm;
+        private readonly ClientForm clientForm;
 
-        public AuthView(FormController formController) {
+        public AuthView(FormController formController, AdminForm adminForm, ClientForm clientForm) {
             this.formController = formController;
+            this.adminForm = adminForm;
+            this.clientForm = clientForm;
         }
 
 
@@ -16,11 +20,11 @@ namespace WinFormsBanking.views {
         }
 
         public void ShowAdminContent(User user) {
-            formController.Show(new AdminForm());
+            formController.Show(adminForm);
         }
 
         public void ShowClientContent(User user) {
-            formController.Show(new ClientForm());
+            formController.Show(clientForm);
         }
 
         public void ShowError(string message) {

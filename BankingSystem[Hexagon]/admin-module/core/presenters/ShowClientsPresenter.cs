@@ -2,7 +2,7 @@
 using BankingSystem_Hexagon_.admin_module.core.use_cases;
 
 namespace BankingSystem_Hexagon_.admin_module.core.presenters {
-    internal class ShowClientsPresenter {
+    public class ShowClientsPresenter {
         private readonly GetClientsUseCase showClientUse;
         private readonly IShowClientsView showClientsView;
 

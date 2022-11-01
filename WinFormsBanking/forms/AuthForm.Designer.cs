@@ -55,6 +55,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(438, 27);
             this.tbLogin.TabIndex = 2;
+            this.tbLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogin_KeyPress);
             // 
             // tbPassword
             // 
@@ -62,6 +63,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(438, 27);
             this.tbPassword.TabIndex = 4;
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
             // label2
             // 
