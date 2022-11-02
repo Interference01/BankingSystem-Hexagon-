@@ -2,7 +2,7 @@
 using BankingSystem_Hexagon_.admin_module.core.ports;
 
 namespace BankingSystem_Hexagon_.admin_module.core.use_cases {
-    internal class GetClientsUseCase {
+    public class GetClientsUseCase {
         private readonly IGetClientsRepository showClientsRepository;
 
         public GetClientsUseCase(IGetClientsRepository showClientsRepository) {

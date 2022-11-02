@@ -2,7 +2,7 @@
 using BankingSystem_Hexagon_.auth_module.models;
 
 namespace BankingSystem_Hexagon_.auth_module.repositories {
-    internal class FileAuthRepository : IAuthRepository {
+    public class FileAuthRepository : IAuthRepository {
         private readonly FileStore fileStore;
         public FileAuthRepository(FileStore fileStore) {
             this.fileStore = fileStore;

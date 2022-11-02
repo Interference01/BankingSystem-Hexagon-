@@ -2,7 +2,7 @@
 using BankingSystem_Hexagon_.admin_module.core.use_cases;
 
 namespace BankingSystem_Hexagon_.admin_module.core.presenters {
-    internal class AddCardPresenter {
+    public class AddCardPresenter {
         private readonly AddCardUseCase addCardUseCase;
         private readonly IAddCardView addCardView;
 

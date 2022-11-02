@@ -1,13 +1,8 @@
 ﻿using BankingSystem_Hexagon_.admin_module.core.models;
 using BankingSystem_Hexagon_.admin_module.core.ports;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankingSystem_Hexagon_.admin_module.repositories {
-    internal class FileShowClientsRepository : IGetClientsRepository {
+    public class FileShowClientsRepository : IGetClientsRepository {
         private readonly FileStore fileStore;
 
         public FileShowClientsRepository(FileStore fileStore) {
