@@ -25,6 +25,7 @@
         private void InitializeComponent() {
             this.lInfo = new System.Windows.Forms.Label();
             this.bShowBalance = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lInfo
@@ -32,24 +33,35 @@
             this.lInfo.AutoSize = true;
             this.lInfo.Location = new System.Drawing.Point(12, 9);
             this.lInfo.Name = "lInfo";
-            this.lInfo.Size = new System.Drawing.Size(35, 20);
+            this.lInfo.Size = new System.Drawing.Size(64, 20);
             this.lInfo.TabIndex = 0;
-            this.lInfo.Text = "Info";
+            this.lInfo.Text = "Balance:";
             // 
             // bShowBalance
             // 
-            this.bShowBalance.Location = new System.Drawing.Point(66, 57);
+            this.bShowBalance.Location = new System.Drawing.Point(96, 57);
             this.bShowBalance.Name = "bShowBalance";
-            this.bShowBalance.Size = new System.Drawing.Size(145, 52);
+            this.bShowBalance.Size = new System.Drawing.Size(233, 53);
             this.bShowBalance.TabIndex = 1;
-            this.bShowBalance.Text = "button1";
+            this.bShowBalance.Text = "-------";
             this.bShowBalance.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(886, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 29);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 582);
+            this.ClientSize = new System.Drawing.Size(931, 588);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bShowBalance);
             this.Controls.Add(this.lInfo);
             this.Name = "ClientForm";
@@ -64,5 +76,6 @@
 
         private Label lInfo;
         private Button bShowBalance;
+        private Button button1;
     }
 }

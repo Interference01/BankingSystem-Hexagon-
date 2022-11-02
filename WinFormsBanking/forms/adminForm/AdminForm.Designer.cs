@@ -28,8 +28,9 @@
             this.bAddCard = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lName = new System.Windows.Forms.Label();
             this.tbWindowShow = new System.Windows.Forms.TextBox();
+            this.bExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bRegisterClient
@@ -80,14 +81,14 @@
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Admin Name";
+            this.lName.AutoSize = true;
+            this.lName.Location = new System.Drawing.Point(32, 22);
+            this.lName.Name = "lName";
+            this.lName.Size = new System.Drawing.Size(97, 20);
+            this.lName.TabIndex = 0;
+            this.lName.Text = "Admin Name";
             // 
             // tbWindowShow
             // 
@@ -97,21 +98,33 @@
             this.tbWindowShow.Size = new System.Drawing.Size(452, 489);
             this.tbWindowShow.TabIndex = 6;
             // 
+            // bExit
+            // 
+            this.bExit.Location = new System.Drawing.Point(1056, 12);
+            this.bExit.Name = "bExit";
+            this.bExit.Size = new System.Drawing.Size(30, 30);
+            this.bExit.TabIndex = 7;
+            this.bExit.Text = "X";
+            this.bExit.UseVisualStyleBackColor = true;
+            this.bExit.Click += new System.EventHandler(this.bExit_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 577);
+            this.Controls.Add(this.bExit);
             this.Controls.Add(this.tbWindowShow);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.bAddCard);
             this.Controls.Add(this.bShowAllClients);
             this.Controls.Add(this.bRegisterClient);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lName);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +137,8 @@
         private Button bAddCard;
         private Button button4;
         private Button button5;
-        private Label label1;
+        private Label lName;
         private TextBox tbWindowShow;
+        private Button bExit;
     }
 }

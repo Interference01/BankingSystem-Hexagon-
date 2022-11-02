@@ -6,11 +6,13 @@ namespace WinFormsBanking.forms {
         private readonly ShowBalancePresenter showBalancePresenter;
         private readonly CardBalanceState cardBalanceState;
         private readonly CurrentUser currentUser;
+        private readonly FormController formController;
 
-        public ClientForm(ShowBalancePresenter showBalancePresenter, CardBalanceState cardBalanceState, CurrentUser currentUser) {
+        public ClientForm(ShowBalancePresenter showBalancePresenter, CardBalanceState cardBalanceState, CurrentUser currentUser, FormController formController) {
             this.showBalancePresenter = showBalancePresenter;
             this.cardBalanceState = cardBalanceState;
             this.currentUser = currentUser;
+            this.formController = formController;
             cardBalanceState.cardBalanceEvent += CardBalance;
             InitializeComponent();
         }
@@ -24,6 +26,10 @@ namespace WinFormsBanking.forms {
 
         private void ClientForm_Load(object sender, EventArgs e) {
             ActuallyInfo();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            formController.ShowHomeForm();
         }
     }
 }

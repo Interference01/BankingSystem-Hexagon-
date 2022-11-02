@@ -8,14 +8,21 @@ namespace WinFormsBanking.forms
     public partial class AdminForm : Form {
         private readonly RegisterForm RegisterForm; 
         private readonly InputForm InputForm;
+        private readonly FormController formController;
+        private readonly CurrentUser currentUser;
 
         private readonly ShowClientsPresenter ShowClientsPresenter;
         private readonly ShowClientsState ShowClientsState;
-        public AdminForm(RegisterForm registerForm, InputForm inputForm, ShowClientsPresenter showClientsPresenter, ShowClientsState state ) {
+        public AdminForm(RegisterForm registerForm, InputForm inputForm, ShowClientsPresenter showClientsPresenter, ShowClientsState state,
+            FormController formController, CurrentUser currentUser) {
+
             this.RegisterForm = registerForm;
             this.InputForm = inputForm;
             this.ShowClientsPresenter = showClientsPresenter;
             this.ShowClientsState = state;
+            this.formController = formController;
+            this.currentUser = currentUser;
+
             ShowClientsState.showClientsEvent += ShowClients;
             InitializeComponent();
         }
@@ -41,6 +48,14 @@ namespace WinFormsBanking.forms
                     $"Password: {item.Password} {Environment.NewLine}" +
                     $"Phone: {item.Phone} {Environment.NewLine}{Environment.NewLine}";
             }
+        }
+
+        private void bExit_Click(object sender, EventArgs e) {
+            formController.ShowHomeForm();
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e) {
+            lName.Text = $"Hello NAME";
         }
     }
 }

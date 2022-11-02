@@ -32,8 +32,10 @@ namespace BankingSystem_Hexagon_.admin_module.repositories {
 
             user.Card = new CardDTO() {
                 Number = numberCard,
+                Id = Guid.NewGuid(),
             };
 
+            FileStore.Serialize(fileStore);
         }
     }
 }

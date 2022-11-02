@@ -24,7 +24,7 @@ namespace WinFormsBanking {
             ApplicationConfiguration.Initialize();
 
             var fileStore = FileStore.CreateFileStore();
-            var formController = new FormController();
+            var formController = new FormController(); // зробити Exit
             var currentUser = new CurrentUser();
 
             var authRepo = new FileAuthRepository(fileStore);
@@ -48,7 +48,7 @@ namespace WinFormsBanking {
 
             var inputForm = new InputForm(addCardPresenter, "Input email of client");
             var registerForm = new RegisterForm(registerPresenter);
-            var adminForm = new AdminForm(registerForm, inputForm, showClientsPresenter, showClientsState);
+            var adminForm = new AdminForm(registerForm, inputForm, showClientsPresenter, showClientsState, formController, currentUser);
 
             var cardBalanceState = new CardBalanceState();
             var cardBalanceRepo = new FileGetBalanceRepository(fileStore);
@@ -56,7 +56,7 @@ namespace WinFormsBanking {
             var cardBalanceView = new ShowBalanceView(cardBalanceState);
             var cardBalancePresenter = new ShowBalancePresenter(cardBalanceUseCase, cardBalanceView);
 
-            var clientForm = new ClientForm(cardBalancePresenter, cardBalanceState, currentUser);
+            var clientForm = new ClientForm(cardBalancePresenter, cardBalanceState, currentUser, formController);
 
 
             var authView = new AuthView(formController, adminForm, clientForm, currentUser);
