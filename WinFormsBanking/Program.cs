@@ -24,7 +24,7 @@ namespace WinFormsBanking {
             ApplicationConfiguration.Initialize();
 
             var fileStore = FileStore.CreateFileStore();
-            var formController = new FormController(); // зробити Exit
+            var formController = new FormController();
             var currentUser = new CurrentUser();
 
             var authRepo = new FileAuthRepository(fileStore);

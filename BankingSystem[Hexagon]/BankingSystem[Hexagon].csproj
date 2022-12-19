@@ -10,7 +10,12 @@
 
   <ItemGroup>
 	<PackageReference Include="Bogus" Version="34.0.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+	<PackageReference Include="EntityFramework" Version="6.4.4" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NSubstitute" Version="4.4.0" />
   </ItemGroup>
 
@@ -20,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="card-module\core\exceptions\" />
+    <Folder Include="database\db\" />
   </ItemGroup>
 
 </Project>
