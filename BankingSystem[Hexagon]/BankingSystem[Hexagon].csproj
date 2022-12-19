@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,6 +7,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="database\db\**" />
+    <EmbeddedResource Remove="database\db\**" />
+    <None Remove="database\db\**" />
+  </ItemGroup>
 
   <ItemGroup>
 	<PackageReference Include="Bogus" Version="34.0.2" />
@@ -25,7 +31,6 @@
 
   <ItemGroup>
     <Folder Include="card-module\core\exceptions\" />
-    <Folder Include="database\db\" />
   </ItemGroup>
 
 </Project>
