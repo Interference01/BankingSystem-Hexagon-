@@ -5,9 +5,9 @@ namespace BankingSystem_Hexagon_.database
 {
     public class BankingDbContext : DbContext
     {
-        public BankingDbContext() : base("name = BankingDBConnectionString")
+        public BankingDbContext() : base("BankingDBV2")
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<BankingDbContext>());
+            Database.SetInitializer<BankingDbContext>(new DropCreateDatabaseIfModelChanges<BankingDbContext>());
         }
 
         public DbSet<User> Users { get; set; }

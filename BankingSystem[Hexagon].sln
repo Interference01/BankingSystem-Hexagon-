@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankSystemTest", "BankSyste
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieldValidationLib", "FieldValidationLib\FieldValidationLib.csproj", "{C627DD22-0FA3-4D43-A499-F61157001F85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsBanking", "WinFormsBanking\WinFormsBanking.csproj", "{6971AC83-E178-4F3F-A171-75C63F209227}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsBanking", "WinFormsBanking\WinFormsBanking.csproj", "{6971AC83-E178-4F3F-A171-75C63F209227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingDatabase", "BankingDatabase\BankingDatabase.csproj", "{3903BD4D-17E3-4899-B873-3342CC427FB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6971AC83-E178-4F3F-A171-75C63F209227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6971AC83-E178-4F3F-A171-75C63F209227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6971AC83-E178-4F3F-A171-75C63F209227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3903BD4D-17E3-4899-B873-3342CC427FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3903BD4D-17E3-4899-B873-3342CC427FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3903BD4D-17E3-4899-B873-3342CC427FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3903BD4D-17E3-4899-B873-3342CC427FB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
