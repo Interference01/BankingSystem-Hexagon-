@@ -17,7 +17,7 @@ namespace BankSystemTest.admin_module.core.presenters {
 
             var registerRepository = Substitute.For<IRegisterRepository>();
             var registerClientUseCase = Substitute.For<RegisterClientUseCase>(registerRepository);
-            var registerClientView = Substitute.For<IRegisterClientView>();
+            var registerClientView = Substitute.For<IRegisterView>();
 
             var registerClientPresenter = new RegisterClientPresenter(registerClientView, registerClientUseCase);
 
@@ -41,7 +41,7 @@ namespace BankSystemTest.admin_module.core.presenters {
             
             var registerRepository = Substitute.For<IRegisterRepository>();
             var registerClientUseCase = Substitute.For<RegisterClientUseCase>(registerRepository);
-            var registerClientView = Substitute.For<IRegisterClientView>();
+            var registerClientView = Substitute.For<IRegisterView>();
 
             var registerClientPresenter = new RegisterClientPresenter(registerClientView, registerClientUseCase);
 

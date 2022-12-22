@@ -15,19 +15,19 @@ namespace BankSystemTest.admin_module.core.presenters {
             var errorText = facker.Random.String();
             var clients = new Client[4];
 
-            var showClientsRepository = Substitute.For<IShowClientsRepository>();
-            var showClientsUseCase = Substitute.For<ShowClientsUseCace>(showClientsRepository);
+            var showClientsRepository = Substitute.For<IGetClientsRepository>();
+            var showClientsUseCase = Substitute.For<GetClientsUseCase>(showClientsRepository);
             var showClientsView = Substitute.For<IShowClientsView>();
 
             var showClientsPresenter = new ShowClientsPresenter(showClientsUseCase, showClientsView);
 
-            showClientsUseCase.ShowClients().Returns(clients);
+            showClientsUseCase.GetClients().Returns(clients);
             //When
 
             showClientsPresenter.ShowClients();
 
             //Then
-            showClientsUseCase.Received().ShowClients();
+            showClientsUseCase.Received().GetClients();
             showClientsView.Received().ShowClientInfo(clients);
             showClientsView.DidNotReceive().ShowErrorMessage(errorText);
 
@@ -40,19 +40,19 @@ namespace BankSystemTest.admin_module.core.presenters {
             var errorText = "Clients not exist";
             var clients = new Client[0];
 
-            var showClientsRepository = Substitute.For<IShowClientsRepository>();
-            var showClientsUseCase = Substitute.For<ShowClientsUseCace>(showClientsRepository);
+            var showClientsRepository = Substitute.For<IGetClientsRepository>();
+            var showClientsUseCase = Substitute.For<GetClientsUseCase>(showClientsRepository);
             var showClientsView = Substitute.For<IShowClientsView>();
 
             var showClientsPresenter = new ShowClientsPresenter(showClientsUseCase, showClientsView);
 
-            showClientsUseCase.ShowClients().Returns(clients);
+            showClientsUseCase.GetClients().Returns(clients);
             //When
 
             showClientsPresenter.ShowClients();
 
             //Then
-            showClientsUseCase.Received().ShowClients();
+            showClientsUseCase.Received().GetClients();
             showClientsView.DidNotReceive().ShowClientInfo(clients);
             showClientsView.Received().ShowErrorMessage(errorText);
 

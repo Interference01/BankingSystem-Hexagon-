@@ -24,12 +24,12 @@ namespace BankSystemTest.admin_module.core.use_cases {
                     Phone = "3800002000",
                 }};
 
-            var repository = Substitute.For<IShowClientsRepository>();
-            var showClientsUseCase = new ShowClientsUseCace(repository);
+            var repository = Substitute.For<IGetClientsRepository>();
+            var showClientsUseCase = new GetClientsUseCase(repository);
 
 
             //When
-            showClientsUseCase.ShowClients();
+            showClientsUseCase.GetClients();
             //Then
         }
 
